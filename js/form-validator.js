@@ -3,6 +3,16 @@ class FormValidator {
         this.errors = {};
     }
 
+    validateEntreprise(text) {
+        if (!text || text.trim().length < 2) {
+            return 'L entreprise doit contenir au moins 2 caractères';
+        }
+        if (text.trim().length > 50) {
+            return 'Le nom ne doit pas dépasser 50 caractères';
+        }
+        return null;
+    }
+
     validateName(name) {
         if (!name || name.trim().length < 2) {
             return 'Le nom doit contenir au moins 2 caractères';
