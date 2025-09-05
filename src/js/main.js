@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
+    // eslint-disable-next-line no-undef
     const validator = new FormValidator();
     
     // Smooth scrolling

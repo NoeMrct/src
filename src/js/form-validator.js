@@ -28,6 +28,7 @@ class FormValidator {
 
     validatePhone(phone) {
         if (phone && phone.trim() !== '') {
+            // eslint-disable-next-line no-useless-escape
             const phoneRegex = /^[0-9\s\-\+\(\)]{10,}$/;
             if (!phoneRegex.test(phone)) {
                 return 'Format de téléphone invalide';
@@ -70,6 +71,8 @@ class FormValidator {
 }
 
 // Export pour les tests
+// eslint-disable-next-line no-undef
 if (typeof module !== 'undefined' && module.exports) {
+    // eslint-disable-next-line no-undef
     module.exports = FormValidator;
 }

@@ -1,0 +1,23 @@
+{
+  "name": "site-vitrine",
+  "version": "1.0.0",
+  "description": "Site vitrine avec tests CI/CD",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "lint": "eslint src/js/ --ext .js",
+    "lint:fix": "eslint src/js/ --ext .js --fix",
+    "serve": "python -m http.server 8000 --directory src",
+    "build": "echo 'Build completed - static files ready'",
+    "deploy": "echo 'Deploying to production'"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
