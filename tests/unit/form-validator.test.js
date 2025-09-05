@@ -7,6 +7,18 @@ describe('FormValidator', () => {
     validator = new FormValidator();
   });
 
+  describe('validateEntreprise', () => {
+    test('should return error for empty entreprise', () => {
+      const result = validator.validateEntreprise('');
+      expect(result).toBe('L entreprise doit contenir au moins 2 caractères');
+    });
+
+    test('should return error for entreprise name to short', () => {
+      const result = validator.validateEntreprise('A');
+      expect(result).toBe('L entreprise doit contenir au moins 2 caractères');
+    });
+  });
+
   describe('validateName', () => {
     test('should return error for empty name', () => {
       const result = validator.validateName('');
